@@ -1,9 +1,6 @@
-<template>
-  
-</template>
-
 <script>
-import axios from 'axios';
+//import axios from 'axios';
+
 export default {
     data(){
         return{
@@ -14,13 +11,13 @@ export default {
          }
     },
 
-    methods:{
-        getList(){
-            axios.get('http://127.0.0.1:8000/api/v1/mods/').then((response) => {
-            response.data;
-            }
-        )},
-    }
+    // methods:{
+    //     getList(){
+    //         axios.get('http://127.0.0.1:8000/api/v1/mods/').then((response) => {
+    //         response.data;
+    //         }
+    //     )},
+    // }
 }
 
 

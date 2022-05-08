@@ -1,5 +1,6 @@
 <template>
-    <header_2 />
+    <!-- <header2 /> -->
+    <contentShow />
     <div>
         <a><img src = "" /></a>
     </div>
@@ -32,10 +33,10 @@
 </template>
 
 <script>
-import header_2 from '@/src/plugins/global_component/header_2.vue';
-import content_show from '@/plugins/detail_page/component/content_show.vue'
+//import header2 from '@/src/plugins/globalComponent/header2.vue';
+import contentShow from '@/plugins/detailPage/component/contentShow.vue'
 
 export default {
-    components: [{header_2, content_show}]
+    components: {contentShow} //sem pridat header2 po odkomentovani
 }
 </script>
