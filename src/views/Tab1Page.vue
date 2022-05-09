@@ -8,76 +8,24 @@
     </ion-header>
     <ion-content>
 
-      <ion-card>
-        <ion-card-header>
-          <img width="85" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png">
-          <img width="25" top="100px" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970968283715096586/unknown.png">
-          <ion-card-title>Impostor</ion-card-title>
-        </ion-card-header>
+      <div class="nobull" v-for="(i) in card" :key="i.cardTitle">
+          <ion-card>
+            <ion-card-header>
+              <img width="85" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png">
+              <img width="25" top="100px" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970968283715096586/unknown.png">
+            </ion-card-header>
 
-        <ion-card-content>
-          <p>sus</p>
-          <p>C#</p>
-          <p>tvoju mamu</p>
-          <p>vesmir</p>
-        </ion-card-content>
-      </ion-card>
+            <ion-card-content>
+              <p>Impostor</p>
+              <p>Sus</p>
+              <p>C#</p>
+              <p>Tvoju mamu</p>
+              <p>Vesmir</p>
+            </ion-card-content>
+          </ion-card> 
+      </div>
 
-     <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle> <img src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png"></ion-card-subtitle>
-          <ion-card-title>Crewmate 1</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          chcem peniaze
-        </ion-card-content>
-      </ion-card>
-
-    <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle> <img src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png"></ion-card-subtitle>
-          <ion-card-title>Crewmate 2</ion-card-title>
-
-        </ion-card-header>
-
-        <ion-card-content>
-          chcem peniaze
-        </ion-card-content>
-      </ion-card>
-
-    <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle> <img src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png"></ion-card-subtitle>
-          <ion-card-title>Crewmate 3</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          chcem peniaze
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle><img src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png"></ion-card-subtitle>
-          <ion-card-title>Crewmate 4</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          chcem peniaze
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle> <img src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png"></ion-card-subtitle>
-          <ion-card-title>Crewmate 5</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          chcem peniaze
-        </ion-card-content>
-      </ion-card>
+    <ion-button @click="addCard()">Test</ion-button>
 
     </ion-content>
   </ion-page>
@@ -90,8 +38,73 @@
 
   export default  defineComponent({
     name: 'Tab1Page',
-    components: {IonHeader, IonToolbar, IonTitle, IonContent, IonPage}
-    })
+    components: {IonHeader, IonToolbar, IonTitle, IonContent, IonPage},
+
+    data(){
+      return{
+        //veci ktore zoberem z backendu
+        name:'',
+        job:'',
+        skillsInJob:'',
+        money:'',
+        city:'',
+        //veci ktore vytvorim tu
+        card:[
+          {cardID:0},
+          {cardID:1},
+          {cardID:2},
+          {cardID:3},
+          {cardID:4},
+          {cardID:5},
+          ]
+      };
+    },
+
+    methods:{
+        // addName(){
+        //   this.card.push({
+        //     nameText:this.name,
+        //   }),
+        //   this.name=''
+        // },
+
+        // addJob(){
+        //   this.card.push({
+        //     jobText:this.job,
+        //   }),
+        //   this.job=''
+        // },
+
+        // addSkill(){
+        //   this.card.push({
+        //     skillText:this.skillsInJob,
+        //   }),
+        //   this.skillsInJob=''
+        // },
+
+        // addMoney(){
+        //   this.card.push({
+        //     moneyNum:this.money,
+        //   }),
+        //   this.money=''
+        // },
+
+        // addCity(){
+        //   this.card.push({
+        //     cityText:this.city,
+        //   }),
+        //   this.city=''
+        // },
+
+        addCard(cardID){
+          this.card.push({
+            cardID:cardID+1
+          })
+        },
+
+      }
+  })
+
 
 </script>
 
@@ -110,5 +123,14 @@
   .imgs{
     display: inline-block;
   };
+
+  .button{
+    width: 10000px;
+    height: 10000px;
+  }
+
+  .nobull {
+  list-style-type:"";
+ }
 
 </style>
