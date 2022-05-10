@@ -1,42 +1,22 @@
 <template>
-    <!-- <header2 /> -->
-    <contentShow />
-    <div>
-        <a><img src = "" /></a>
-    </div>
-    <div>
-        <h5>Name: {{props.content.Fullname}}</h5>
-        <ion-item-divider/>
-        <h5>Proffesion: {{props.content.Proffesion}}</h5>
-        <ion-item-divider/>
-        <h5>Proffesion Language: {{props.content.Proffesion_Language}}</h5>
-        <ion-item-divider/>
-        <h5>Proffesion Language Level: {{props.content.Proffesion_Language_Level}}</h5>
-        <ion-item-divider/>
-        <h5>Language: {{props.content.Language}}</h5>
-        <ion-item-divider/>
-        <h5>Language Level: {{props.content.Language_Level}}</h5>
-        <ion-item-divider/>
-        <h5>Pay: {{props.content.Pay}}</h5>
-        <ion-item-divider/>
-        <h5>Contact Info:</h5>
-        <ion-item-divider/>
-        <h5>Email: {{props.content.Contact_Info.Email}}</h5>
-        <ion-item-divider/>
-        <h5>Telephoe: {{props.content.Contact_Info.Telehone}}</h5>
-        <ion-item-divider/>
-        <h5>City: {{props.content.City}}</h5>
-        <ion-item-divider/>
-        <h5>Description: {{props.content.Description}}</h5>
-        <ion-item-divider/>
-    </div>
+    <ion-page>
+        <ion-content>
+            <div>
+                <a><img src = "https://cdn.discordapp.com/attachments/955521319720599555/969554305457737788/Snimka_obrazovky_2022-04-28_201718.png" /></a>
+            </div>
+            <div>
+                <ContentShow />
+            </div>
+        </ion-content>
+    </ion-page>
 </template>
 
 <script>
 //import header2 from '@/src/plugins/globalComponent/header2.vue';
 import contentShow from '@/plugins/detailPage/component/contentShow.vue'
+import { IonPage, IonContent } from '@ionic/vue';
 
 export default {
-    components: {contentShow} //sem pridat header2 po odkomentovani
+    components: {contentShow, IonPage, IonContent} //sem pridat header2 po odkomentovani
 }
 </script>
