@@ -27,6 +27,7 @@
                 ],
             }
         },
+<<<<<<< HEAD
             methods:{
                 addCard(cardID){
                     this.card.push({
@@ -34,6 +35,15 @@
                     })
             },
         },
+=======
+        methods:{
+        addCard(cardID){
+            this.card.push({
+            cardID:cardID+1,
+            })
+        }
+        } 
+>>>>>>> 775385d358eb151b7aba8cbf0b79c07fd6e9837d
     }
     
 </script>
