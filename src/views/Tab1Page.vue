@@ -3,12 +3,11 @@
 </template>
 
 <script>
-  import { defineComponent } from 'vue';
-  import HomePage from "@/plugins/homepage/view/HomePage.vue"
+  import HomePage from "@/plugins/kokot/view/homepage.vue"
 
-  export default  defineComponent({
-    name: 'Tab1Page',
+  export default  {
     components:{
       HomePage
-    },})
+    }
+  }
 </script>

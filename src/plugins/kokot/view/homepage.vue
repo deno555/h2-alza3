@@ -17,10 +17,9 @@
 
 <script>
     import {IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue';
-    import { defineComponent } from '@vue/runtime-core';
     import Profile from '@/plugins/homepage/component/card.vue';
 
-    export default defineComponent({
+    export default {
         components: {
             IonHeader, 
             IonToolbar, 
@@ -29,5 +28,5 @@
             Profile,
         },
 
-    })
+    }
 </script>
