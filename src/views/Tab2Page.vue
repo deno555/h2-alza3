@@ -1,17 +1,20 @@
 <template>
   <ion-page>
     <ion-content>
-      <DetailsPage />
+      <ion-header>
+        <!-- import <Header /> component -->
+      </ion-header>
+        <DetailsPage />
     </ion-content>
   </ion-page>  
 </template>
 
-<script>
-  import DetailsPage from '@/plugins/detailPage/view/detailsPage.vue'
-  import { IonPage, IonContent} from '@ionic/vue';
-  //import contentShow from '@/plugins/detailPage/component/contentShow.vue'
+<script lang="ts">
+  import DetailsPage from '@/plugins/detailPage/view/DetailsPage.vue';
+  import { IonPage, IonContent, IonHeader} from '@ionic/vue';
+  // import Header \import header2 from '@/plugins/global_component/Header.vue'\ 
 
   export default{
-      components: {DetailsPage, IonPage, IonContent}
+      components: {DetailsPage, IonPage, IonContent, IonHeader} // pridat 'Header'
   }
 </script>

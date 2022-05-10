@@ -30,10 +30,10 @@
         methods:{
         addCard(cardID){
             this.card.push({
-            cardID:cardID+1
-            }),
-        },
-        }, 
+            cardID:cardID+1,
+            })
+        }
+        } 
     }
     
 </script>
