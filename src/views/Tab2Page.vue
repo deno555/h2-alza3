@@ -1,12 +1,12 @@
 <template>
-  <detailsPage />
+  <DetailsPage />
 </template>
 
 <script>
-import detailsPage from '@/plugins/detailPage/view/detailsPage.vue'
-//import contentShow from '@/plugins/detailPage/component/contentShow.vue'
+  import DetailsPage from '@/plugins/detailPage/view/detailsPage.vue'
+  //import contentShow from '@/plugins/detailPage/component/contentShow.vue'
 
-export default{
-    components: {detailsPage}
-}
+  export default{
+      components: {DetailsPage}
+  }
 </script>
