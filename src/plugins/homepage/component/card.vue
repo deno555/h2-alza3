@@ -16,3 +16,17 @@
           </ion-card> 
       </div>
 </template>
+
+<style>
+    ion-card{
+        width: 40%;
+        display: inline-block;
+        height:270px;
+        left:15px;
+    };
+
+    .imgs{
+        display: inline-block;
+    };
+
+</style>

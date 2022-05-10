@@ -16,9 +16,10 @@
 </template>
 
 <script>
-    import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue';
-import { defineComponent } from '@vue/runtime-core';
+    import {IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue';
+    import { defineComponent } from '@vue/runtime-core';
+
     export default defineComponent({
-        components: {IonHeader, IonToolbar, IonTitle, IonContent, IonPageHomepage},
+        components: {IonHeader, IonToolbar, IonTitle, IonContent},
     })
 </script>
