@@ -5,7 +5,7 @@
                 <a><img src = "https://cdn.discordapp.com/attachments/955521319720599555/969554305457737788/Snimka_obrazovky_2022-04-28_201718.png" /></a>
             </div>
             <div>
-                <ContentShow />
+                <contentShow />
             </div>
         </ion-content>
     </ion-page>
