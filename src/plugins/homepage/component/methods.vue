@@ -1,6 +1,6 @@
 <script>
     export default{
-         data(){
+        data(){
             return{
                 //veci ktore zoberem z backendu
                 name:'',
@@ -27,13 +27,13 @@
                 ],
             }
         },
-        methods:{
-        addCard(cardID){
-            this.card.push({
-            cardID:cardID+1
-            }),
+            methods:{
+                addCard(cardID){
+                    this.card.push({
+                    cardID:cardID+1,
+                    })
+            },
         },
-        }, 
     }
     
 </script>

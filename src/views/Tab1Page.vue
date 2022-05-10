@@ -1,14 +1,14 @@
 <template>
-  <Homepage/>
+  <HomePage/>
 </template>
 
 <script>
   import { defineComponent } from 'vue';
-  import Homepage from '@/plugins/homepage/view/homepage.vue';
+  import HomePage from "@/plugins/homepage/view/HomePage.vue"
 
   export default  defineComponent({
     name: 'Tab1Page',
     components:{
-      Homepage
+      HomePage
     },})
 </script>

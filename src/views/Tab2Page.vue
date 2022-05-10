@@ -14,4 +14,4 @@
   export default{
       components: {DetailsPage, IonPage, IonContent}
   }
-</script>
+</script> 
