@@ -3,7 +3,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-title class="ion-text-center">Stážisti</ion-title>
-        <ion-button><ion-icon name="options-outline"></ion-icon></ion-button>
+        <ion-button></ion-button>
       </ion-toolbar>
     </ion-header>
     <ion-content>
