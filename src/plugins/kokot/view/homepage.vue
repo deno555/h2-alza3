@@ -17,7 +17,7 @@
 
 <script>
     import {IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue';
-    import Profile from '@/plugins/homepage/component/card.vue';
+    import Profile from '@/plugins/kokot/component/card.vue';
 
     export default {
         components: {
