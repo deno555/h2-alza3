@@ -2,7 +2,7 @@
   <ion-page>
     <ion-content>
       <ion-header>
-        <!-- import <Header /> component -->
+        <!-- import <AHeader /> component -->
       </ion-header>
         <DetailsPage />
     </ion-content>
@@ -12,9 +12,9 @@
 <script lang="ts">
   import DetailsPage from '@/plugins/detailPage/view/DetailsPage.vue';
   import { IonPage, IonContent, IonHeader} from '@ionic/vue';
-  // import Header \import header2 from '@/plugins/global_component/Header.vue'\ 
+  // import AHeader \import header2 from '@/plugins/global_component/AHeader.vue'\ 
 
   export default{
-      components: {DetailsPage, IonPage, IonContent, IonHeader} // pridat 'Header'
+      components: {DetailsPage, IonPage, IonContent, IonHeader} // pridat 'AHeader'
   }
 </script>
