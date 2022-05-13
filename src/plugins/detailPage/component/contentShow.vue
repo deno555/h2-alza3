@@ -33,19 +33,21 @@ import { IonItemDivider} from '@ionic/vue';
 
 export default {
     components: { IonItemDivider},
-    data(){``
+    data(){
         return{
             props: {content : [{
                 Fullname: [{Name: '', Surname: ''}], Proffesion: '', Proffesion_Language: ['', '', ''], Proffesion_Language_Level: ['', '', ''], Language: '', Language_Level: '', Pay: '', Email: '', Telephone: '', City: '', Description: ''
               }]},
-
          }
     },
 
     methods:{
         getList(){
-            axios.get('http://127.0.0.1:8000/api/v1/mods/').then((response) => {
+            axios.get('http://127.0.0.1:8000/api/v1/').then((response) => { //prepisat url
             response.data;
+
+                this.props[0].content.push({Fullname: response.data.Fullname, Proffesion: response.data.Proffesion, Proffesion_Language: response.data.Proffesion_Language, Proffesion_Language_Level: response.data.Proffesion_Language_Level, Language: response.data.Language, Language_Level: response.data.Language_Level, Pay: response.data.Pay, Email: response.data.Email, Telephone: response.data.Telephone, City: response.data.City, Description: response.data.Description });
+            
             }
         )},
     }
