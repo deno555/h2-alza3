@@ -41,6 +41,10 @@ export default {
          }
     },
 
+    created:{
+        getList();
+    },
+
     methods:{
         getList(){
             axios.get('http://127.0.0.1:8000/api/v1/').then((response) => { //prepisat url
