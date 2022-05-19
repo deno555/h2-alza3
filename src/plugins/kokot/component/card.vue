@@ -1,28 +1,30 @@
 <template>
-    <div v-for="(i) in card" :key="i.cardTitle">
-      <ion-card>
-        <ion-card-header>
-          <img width="85" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png">
-          <img width="25" top="100px" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970968283715096586/unknown.png">
-        </ion-card-header>
+    <div v-for="(i) in card" :key="i.card">
+        <ion-card>
+            <ion-card-header>
+                <img width="86" class="imgs" src="https://media.discordapp.net/attachments/768503373363806218/970768614942732388/unknown.png">
+                <img width="36" top="211px" class="imgs" src="https://media.discordapp.net/attachments/768503373363806218/970968283715096586/unknown.png?width=589&height=669">
+            </ion-card-header>
 
-        <ion-card-content>
-          <p>Impostor</p>
-          <p>Sus</p>
-          <p>C#</p>
-          <p>Tvoju mamu</p>
-          <p>Vesmir</p>
-        </ion-card-content>
-      </ion-card>
-  </div>
+            <ion-card-content>
+                <p v-for="j in lessThanID(cardName)" v-bind:key="j.cardName" >{{j.names}} - {{j.cardID}}</p>
+                <p v-for="j in lessThanID(cardJob)" v-bind:key="j.cardJob" >{{j.jobs}}</p>
+                <p v-for="j in lessThanID(cardSkill)" v-bind:key="j.cardSkill" >{{j.skills}}</p>
+                <p v-for="j in lessThanID(cardMoney)" v-bind:key="j.cardMoney" >{{j.moneys}}</p>
+                <p v-for="j in lessThanID(cardCity)" v-bind:key="j.cardCity" >{{j.citys}}</p>
+            </ion-card-content>
+        </ion-card>
+
+         <ion-button @click="addCard(), count()">Test</ion-button>
+    </div>
 </template>
 
 <style>
     ion-card{
-        width: 40%;
+        width: 45%;
         display: inline-block;
-        height:270px;
-        left:15px;
+        height:280px;
+        left:26px;
     };
 
     .imgs{
@@ -38,35 +40,121 @@
                 //veci ktore zoberem z backendu
                 name:'',
                 job:'',
-                skillsInJob:'',
+                jobSkills:'',
                 money:'',
                 city:'',
                 //veci ktore vytvorim tu
+                idCount:1,
+                counter:1,
                 card:[
-                    {cardID:0},
                     {cardID:1},
                     {cardID:2},
                     {cardID:3},
                     {cardID:4},
                     {cardID:5},
+                    {cardID:6},
                 ],
                 cardName:[
-                    {names:"Impostor"},
-                    {names:"Crewmate1"},
-                    {names:"Crewmate2"},
-                    {names:"Crewmate3"},
-                    {names:"Crewmate4"},
-                    {names:"Crewmate5"},
+                    {names:"Impostor", cardID:1},
+                    {names:"Crewmate2", cardID:2},
+                    {names:"Crewmate3", cardID:3},
+                    {names:"Crewmate4", cardID:4},
+                    {names:"Crewmate5", cardID:5},
+                    {names:"Crewmate6", cardID:6},
                 ],
+                cardJob:[
+                    {jobs:"Sus", cardID:1},
+                    {jobs:"Electrical", cardID:2},
+                    {jobs:"Water", cardID:3},
+                    {jobs:"Vent", cardID:4},
+                    {jobs:"Medical", cardID:5},
+                    {jobs:"Admin", cardID:6},
+                ],
+                cardSkill:[
+                    {skills:"Kill", cardID:1},
+                    {skills:"Wires", cardID:2},
+                    {skills:"Pipe", cardID:3},
+                    {skills:"Air", cardID:4},
+                    {skills:"Heal", cardID:5},
+                    {skills:"Monitor", cardID:6},
+                ],
+                cardMoney:[
+                    {moneys:21, cardID:1},
+                    {moneys:22, cardID:2},
+                    {moneys:23, cardID:3},
+                    {moneys:24, cardID:4},
+                    {moneys:25, cardID:5},
+                    {moneys:26, cardID:6},
+                ],
+                cardCity:[
+                    {citys:"Space1", cardID:1},
+                    {citys:"Space2", cardID:2},
+                    {citys:"Spcae3", cardID:3},
+                    {citys:"Space4", cardID:4},
+                    {citys:"Space5", cardID:5},
+                    {citys:"Space6", cardID:6},
+                ]
             }
         },
-            methods:{
-                addCard(cardID){
-                    this.card.push({
+            
+        methods:{
+            addCard(cardID){
+                this.idCount++
+                this.card.push({
                     cardID:cardID+1,
-                    })
+                })
+            },
+
+            addName(cardID){
+                this.cardName.push({
+                    names:this.name,
+                    cardID:cardID+1
+                }),
+                this.name=''
+            },
+
+            addJob(cardID){
+                this.cardJob.push({
+                    jobs:this.job,
+                    cardID:cardID+1
+                }),
+                this.job=''
+            },
+            
+            addSkill(cardID){
+                this.cardSkill.push({
+                    skills:this.jobSkills,
+                    cardID:cardID+1
+                }),
+                this.jobSkills=''  
+            },
+
+            addMoney(cardID){
+                this.cardMoney.push({
+                    moneys:this.money,
+                    cardID:cardID+1
+                }),
+                this.money=''
+            },
+            
+            addCity(cardID){
+                this.cardCity.push({
+                    citys:this.city,
+                    cardID:cardID+1
+                }),
+                this.city=''
+            },
+          
+            count(){
+                this.counter+=1
+            },
+
+            lessThanID(k, idCount=1){
+                idCount=this.counter
+                return k.filter(function(j){
+                    return j.cardID == idCount;
+                })
             },
         },
     }
-    
 </script>

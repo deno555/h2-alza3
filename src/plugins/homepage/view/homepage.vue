@@ -7,9 +7,9 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-        <Profile />
+        <profile />
 
-        
+        <ion-button @click="addCard()">Test</ion-button>
     </ion-content>
   </ion-page>
 
@@ -17,9 +17,10 @@
 
 <script>
     import {IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue';
-    import Profile from '@/plugins/kokot/component/card.vue';
+    import { defineComponent } from '@vue/runtime-core';
+    import Profile from '@/plugins/homepage/component/card.vue';
 
-    export default {
+    export default defineComponent({
         components: {
             IonHeader, 
             IonToolbar, 
@@ -28,5 +29,5 @@
             Profile,
         },
 
-    }
+    })
 </script>
