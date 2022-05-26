@@ -27,7 +27,7 @@
             </div>
 </template>
 <script>
-import axios from 'axios';
+/*import axios from 'axios';
 import { IonItemDivider} from '@ionic/vue';
 
 
@@ -57,5 +57,5 @@ export default {
     }
 }
 
-
+*/
 </script>
