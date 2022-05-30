@@ -2,8 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title class="ion-text-center">Stážisti</ion-title>
-        <ion-button></ion-button>
+        <ion-title class="header">Stážisti</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -14,6 +13,12 @@
   </ion-page>
 
 </template>
+
+<style>
+  .header{
+        position:fixed;
+    }
+</style>
 
 <script>
     import {IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/vue';
