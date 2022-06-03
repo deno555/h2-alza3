@@ -2,34 +2,24 @@
     <div v-for="(i) in card" :key="i.cardTitle">
       <ion-card>
         <ion-card-header>
-          <img width="85" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png">
-          <img width="25" top="100px" class="imgs" src="https://cdn.discordapp.com/attachments/768503373363806218/970968283715096586/unknown.png">
+        <div class="images">
+          <img class="img1" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
+          <img width="40" class="img2" src="https://images.emojiterra.com/google/noto-emoji/v2.034/share/1f3c5.jpg">
+        </div>
         </ion-card-header>
 
         <ion-card-content>
-          <p>Impostor</p>
-          <p>Sus</p>
-          <p>C#</p>
-          <p>Tvoju mamu</p>
-          <p>Vesmir</p>
+          <p>Meno</p>
+          <p>Mesto</p>
+          <p>Jaziky</p>
+          <p>Plat</p>
+          <p>Skusenosti</p>
         </ion-card-content>
       </ion-card>
   </div>
 </template>
 
-<style>
-    ion-card{
-        width: 40%;
-        display: inline-block;
-        height:270px;
-        left:15px;
-    };
 
-    .imgs{
-        display: inline-block;
-    };
-
-</style>
 
 <script>
     export default{
@@ -70,3 +60,28 @@
     }
     
 </script>
+
+<style>
+    .images{
+        
+    }
+
+    ion-card{
+        display: grid;
+        width: 38%;
+        display: inline-block;
+        height:270px;
+        left:15px;
+        top: 0px;
+    };
+
+    .img1{
+        width: 100px;
+     };
+
+    .img2{
+        position: absolute;
+        width: 4px;
+    };
+
+</style>

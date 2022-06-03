@@ -9,7 +9,7 @@
 
 <script>
 //import header2 from '@/src/plugins/globalComponent/header2.vue';
-import ContentShow from '@/plugins/detailPage/component/ContentShow.vue'
+import ContentShow from '@/plugins/detailPage/component/contentShow.vue'
 //import { IonPage, IonContent } from '@ionic/vue';
 
 export default {
