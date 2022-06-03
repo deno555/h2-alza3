@@ -1,30 +1,30 @@
 <template>
-    <div v-for="(i) in card" :key="i.card">
+    <div v-for="(i) in card" :key="i.card" class="card">
         <ion-card>
             <ion-card-header>
-                <img width="86" class="imgs" src="https://media.discordapp.net/attachments/768503373363806218/970768614942732388/unknown.png">
+                <img id="imgs" width="86" class="imgs" src="https://media.discordapp.net/attachments/768503373363806218/970768614942732388/unknown.png">
                 <img width="36" top="211px" class="imgs" src="https://media.discordapp.net/attachments/768503373363806218/970968283715096586/unknown.png?width=589&height=669">
             </ion-card-header>
 
             <ion-card-content>
-                <p v-for="j in lessThanID(cardName)" v-bind:key="j.cardName" >{{j.names}} - {{j.cardID}}</p>
-                <p v-for="j in lessThanID(cardJob)" v-bind:key="j.cardJob" >{{j.jobs}}</p>
-                <p v-for="j in lessThanID(cardSkill)" v-bind:key="j.cardSkill" >{{j.skills}}</p>
-                <p v-for="j in lessThanID(cardMoney)" v-bind:key="j.cardMoney" >{{j.moneys}}</p>
-                <p v-for="j in lessThanID(cardCity)" v-bind:key="j.cardCity" >{{j.citys}}</p>
+                <p v-for="j in lessThanID(cardAll)" v-bind:key="j.cardName" >{{j.names}} - {{j.cardID}}</p>
+                <p v-for="j in lessThanID(cardAll)" v-bind:key="j.cardJob" >{{j.jobs}}</p>
+                <p v-for="j in lessThanID(cardAll)" v-bind:key="j.cardSkill" >{{j.skills}}</p>
+                <p v-for="j in lessThanID(cardAll)" v-bind:key="j.cardMoney" >{{j.moneys}}</p>
+                <p v-for="j in lessThanID(cardAll)" v-bind:key="j.cardCity" >{{j.citys}}</p>
             </ion-card-content>
         </ion-card>
 
-         <ion-button @click="addCard(), count()">Test</ion-button>
     </div>
 </template>
 
 <style>
-    ion-card{
+    .card{
         width: 45%;
         display: inline-block;
         height:280px;
-        left:26px;
+        position:relative;
+        left:16px;
     };
 
     .imgs{
@@ -43,6 +43,7 @@
                 jobSkills:'',
                 money:'',
                 city:'',
+                img:document.getElementById("imgs"),
                 //veci ktore vytvorim tu
                 idCount:1,
                 counter:1,
@@ -93,6 +94,22 @@
                     {citys:"Space4", cardID:4},
                     {citys:"Space5", cardID:5},
                     {citys:"Space6", cardID:6},
+                ],
+                cardImg:[
+                    {imgs:"https://cdn.discordapp.com/attachments/768503373363806218/970768614942732388/unknown.png", cardID:1},
+                    {imgs:"https://cdn.discordapp.com/attachments/768503373363806218/978195932485152778/unknown.png", cardID:2},
+                    {imgs:"https://cdn.discordapp.com/attachments/768503373363806218/978195969126572052/unknown.png", cardID:3},
+                    {imgs:"https://cdn.discordapp.com/attachments/768503373363806218/978196062022033439/unknown.png", cardID:4},
+                    {imgs:"https://cdn.discordapp.com/attachments/768503373363806218/978196122126401546/unknown.png", cardID:5},
+                    {imgs:"https://cdn.discordapp.com/attachments/768503373363806218/978196151826280499/unknown.png", cardID:6},
+                ],
+                cardAll:[
+                    {names:"Impostor", jobs:"SUS",skills:"Kill", moneys:"21",citys:"Space1",cardID:"1"},
+                    {names:"Crewmate2", jobs:"Electrical",skills:"Wires", moneys:"22",citys:"Space2",cardID:"2"},
+                    {names:"Crewmate3", jobs:"Water",skills:"Pipe", moneys:"23",citys:"Space3",cardID:"3"},
+                    {names:"Crewmate4", jobs:"Vent",skills:"Air", moneys:"24",citys:"Space4",cardID:"4"},
+                    {names:"Crewmate5", jobs:"Medical",skills:"Heal", moneys:"25",citys:"Space5",cardID:"5"},
+                    {names:"Crewmate6", jobs:"Admin",skills:"Monitor", moneys:"26",citys:"Space6",cardID:"6"},
                 ]
             }
         },
@@ -144,17 +161,27 @@
                 }),
                 this.city=''
             },
+
+            addImg(){
+                this.img.src=this.cardImg[(this.counter)]
+            },
           
             count(){
                 this.counter+=1
             },
 
-            lessThanID(k, idCount=1){
+            lessThanID(k, idCount=0){
                 idCount=this.counter
-                return k.filter(function(j){
-                    return j.cardID == idCount;
-                })
+                //do{
+                    return k.filter(function(j){
+                        return j.cardID == idCount;
+                    })
+                //}
+                //while()
             },
+            /*whileCondition(){
+
+            },*/
         },
     }
 </script>
