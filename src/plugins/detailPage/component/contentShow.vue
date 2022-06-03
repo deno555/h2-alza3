@@ -41,9 +41,9 @@ export default {
          }
     },
 
-    created:{
-        getList();
-    },
+    // computed:{
+    //     getList();
+    // },
 
     methods:{
         getList(){
